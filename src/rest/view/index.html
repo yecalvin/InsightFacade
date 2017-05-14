@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insightUBC UI</title>
+    <link rel="stylesheet" type="text/css" href="../view/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../view/rooms.css"/>
+    <link rel="stylesheet" type="text/css" href="../view/courses.css"/>
+    <link rel="stylesheet" type="text/css" href="../view/table.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../public/Script.js"></script>
+    <script src="../public/RoomsLogic.js"></script>
+    <script src="../public/CourseExplorer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbU8DyT1XMfcOhQiWWOMoNID9JVDjyddY&callback=handleMap"></script>
+
+
+</head>
+<body>
+<h1 id="pageTitle">insightUBC UI</h1>
+<h2 id="uploadDataset">Upload Dataset <br/>
+    <input type="file" name="fileUpload" id="fileUpload"/>
+    <button id="btnUpload">Upload File</button>
+</h2>
+
+
+<button id="btnQueryField">Toggle Check Query (dev)</button>
+<div id="enterQueryField" style="display:none">
+    <h2 id="enterQuery">Enter Query</h2>
+    <textarea id="txtQuery"></textarea><br/>
+    <button id="btnSubmit">Submit</button>
+</div>
+<div class="scheduler">
+    <a href="../view/scheduler.html">Course Scheduler</a>
+</div>
+
+<section class="container">
+    <div class="queryCourses">
+        <h3>Information on Courses</h3>
+        <form>
+            Department:<br>
+            <input type="text" id="dept" name="courseDepartment"> <br>
+            Course ID:<br>
+            <input type="text" id="cid" name="courseID"> <br>
+            Course Title:<br>
+            <input type="text" id="title" name="courseTitle"> <br>
+            Instructor:<br>
+            <input type="text" id="instr" name="courseInstructor"> <br>
+            Section Size:<br>
+            <input type="text" id="secSize" name="courseSectionSize"> <br>
+            Select AND/OR:<br>
+            <select id="andOr" name="selectAndOr"></select>
+        </form>
+    </div>
+    <table id="tblResults"></table>
+</section>
+
+<section class="container">
+    <div class="queryRooms">
+        <h3>Information on Rooms</h3>
+        <form>
+            Building Name:<br>
+            <select id="sel1" onclick='getRoomsFullName()' name="buildingName"></select><br>
+            Room Number:<br>
+            <select id="sel2" onclick="getRoomNumbers()" name="roomNumber"></select><br>
+            Greater than Room Size:<br>
+            <select id="sel3" onclick="getRoomSize()" name="roomSize"></select><br>
+            Room Type:<br>
+            <select id="sel4" onclick="getRoomType()" name="roomType"></select><br>
+            Furniture Type:<br>
+            <select id="sel5" onclick="getFurnitureType()" name="furnitureType"></select><br>
+            Meters From:<br>
+            <input type="text" id="sel6" name="location"></type>
+            <select id="sel7" onclick='getRoomsFullName2()' name="buildingName"></select><br>
+            Filter out With :<br>
+            rooms_fullname,rooms_number,rooms_seats,rooms_type,rooms_furniture <br>
+            <input type="text" id="filterRoomsInput"/><br>
+
+        </form>
+        <button id="roomButton">Query Me</button>
+        <br>
+        <button id="roomButtonOR">Query Me with OR</button>
+        <br>
+        <button id="clearRoomsQuery" onclick="clearRoomsQuery()">Clear</button>
+        <br>
+    </div>
+
+    <table class="rooms" id="roomsTable">
+        <form>
+            <br>
+            <br>
+        </form>
+    </table>
+
+</section>
+
+<section class="mapOfUBC">
+    <select id="selMap" onclick='getMapNames()' name="buildingName"></select><br>
+    <button id="mapButton" onclick="handleMap()">Location Of Building</button>
+    <div id="googleMap1" style="width:400px;height:300px;"></div>
+</section>
+
+</body>
+</html>

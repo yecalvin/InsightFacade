@@ -1,0 +1,24 @@
+#pageTitle {
+    color: red;
+    font-family: sans-serif;
+}
+
+div {
+    text-align: left;
+}
+
+textarea {
+    height: 300px;
+    width: 300px;
+}
+
+query {
+    text-align:center;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}

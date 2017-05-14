@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Course Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="../view/index.css"/>
+    <link href="../view/multi-select.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../public/schedulerscript.js"></script>
+    <script src="../public/jquery.multi-select.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+</head>
+<body>
+
+<header class = "w3-container"><h2>Class Scheduler</h2></header>
+<div class = "w3-container w3-padding-24 w3-margin">
+    <div class = "w3-display-container w3-border w3-round w3-padding-24 w3-margin" style="height:200px">
+        <h2 class="w3-display-topmiddle">Course Selection</h2>
+        <div class = "w3-container w3-display-bottommiddle w3-padding">
+            <select class="w3-input w3-border w3-round" id="courses">
+                <option value="" diabled selected>Select a department</option>
+            <option value="aanb">
+                aanb
+            </option>
+            <option value="adhe">
+                adhe
+            </option>
+            <option value="anat">
+                anat
+            </option>
+            <option value="anth">
+                anth
+            </option>
+            <option value="apbi">
+                apbi
+            </option>
+            <option value="appp">
+                appp
+            </option>
+            <option value="apsc">
+                apsc
+            </option>
+            <option value="arbc">
+                arbc
+            </option>
+            <option value="arch">
+                arch
+            </option>
+            <option value="arcl">
+                arcl
+            </option>
+            <option value="arst">
+                arst
+            </option>
+            <option value="arth">
+                arth
+            </option>
+            <option value="asia">
+                asia
+            </option>
+            <option value="asic">
+                asic
+            </option>
+            <option value="astr">
+                astr
+            </option>
+            <option value="astu">
+                astu
+            </option>
+            <option value="atsc">
+                atsc
+            </option>
+            <option value="audi">
+                audi
+            </option>
+            <option value="ba">
+                ba
+            </option>
+            <option value="baac">
+                baac
+            </option>
+            <option value="babs">
+                babs
+            </option>
+            <option value="baen">
+                baen
+            </option>
+            <option value="bafi">
+                bafi
+            </option>
+            <option value="bahr">
+                bahr
+            </option>
+            <option value="bait">
+                bait
+            </option>
+            <option value="bala">
+                bala
+            </option>
+            <option value="bama">
+                bama
+            </option>
+            <option value="bams">
+                bams
+            </option>
+            <option value="bapa">
+                bapa
+            </option>
+            <option value="basc">
+                basc
+            </option>
+            <option value="basm">
+                basm
+            </option>
+            <option value="baul">
+                baul
+            </option>
+            <option value="bioc">
+                bioc
+            </option>
+            <option value="biof">
+                biof
+            </option>
+            <option value="biol">
+                biol
+            </option>
+            <option value="bmeg">
+                bmeg
+            </option>
+            <option value="bota">
+                bota
+            </option>
+            <option value="busi">
+                busi
+            </option>
+            <option value="caps">
+                caps
+            </option>
+            <option value="ccst">
+                ccst
+            </option>
+            <option value="ceen">
+                ceen
+            </option>
+            <option value="cell">
+                cell
+            </option>
+            <option value="cens">
+                cens
+            </option>
+            <option value="chbe">
+                chbe
+            </option>
+            <option value="chem">
+                chem
+            </option>
+            <option value="chil">
+                chil
+            </option>
+            <option value="chin">
+                chin
+            </option>
+            <option value="cics">
+                cics
+            </option>
+            <option value="civl">
+                civl
+            </option>
+            <option value="clch">
+                clch
+            </option>
+            <option value="clst">
+                clst
+            </option>
+            <option value="cnps">
+                cnps
+            </option>
+            <option value="cnrs">
+                cnrs
+            </option>
+            <option value="cnto">
+                cnto
+            </option>
+            <option value="coec">
+                coec
+            </option>
+            <option value="cogs">
+                cogs
+            </option>
+            <option value="cohr">
+                cohr
+            </option>
+            <option value="comm">
+                comm
+            </option>
+            <option value="cons">
+                cons
+            </option>
+            <option value="cpen">
+                cpen
+            </option>
+            <option value="cpsc">
+                cpsc
+            </option>
+            <option value="crwr">
+                crwr
+            </option>
+            <option value="dani">
+                dani
+            </option>
+            <option value="dent">
+                dent
+            </option>
+            <option value="dhyg">
+                dhyg
+            </option>
+            <option value="eced">
+                eced
+            </option>
+            <option value="econ">
+                econ
+            </option>
+            <option value="edcp">
+                edcp
+            </option>
+            <option value="edst">
+                edst
+            </option>
+            <option value="educ">
+                educ
+            </option>
+            <option value="eece">
+                eece
+            </option>
+            <option value="elec">
+                elec
+            </option>
+            <option value="ends">
+                ends
+            </option>
+            <option value="engl">
+                engl
+            </option>
+            <option value="enph">
+                enph
+            </option>
+            <option value="envr">
+                envr
+            </option>
+            <option value="eosc">
+                eosc
+            </option>
+            <option value="epse">
+                epse
+            </option>
+            <option value="etec">
+                etec
+            </option>
+            <option value="fhis">
+                fhis
+            </option>
+            <option value="fipr">
+                fipr
+            </option>
+            <option value="fish">
+                fish
+            </option>
+            <option value="fist">
+                fist
+            </option>
+            <option value="fmst">
+                fmst
+            </option>
+            <option value="fnel">
+                fnel
+            </option>
+            <option value="fnh">
+                fnh
+            </option>
+            <option value="fnis">
+                fnis
+            </option>
+            <option value="food">
+                food
+            </option>
+            <option value="fopr">
+                fopr
+            </option>
+            <option value="fre">
+                fre
+            </option>
+            <option value="fren">
+                fren
+            </option>
+            <option value="frst">
+                frst
+            </option>
+            <option value="gbpr">
+                gbpr
+            </option>
+            <option value="geob">
+                geob
+            </option>
+            <option value="geog">
+                geog
+            </option>
+            <option value="germ">
+                germ
+            </option>
+            <option value="gpp">
+                gpp
+            </option>
+            <option value="grek">
+                grek
+            </option>
+            <option value="grsj">
+                grsj
+            </option>
+            <option value="gsat">
+                gsat
+            </option>
+            <option value="hebr">
+                hebr
+            </option>
+            <option value="hgse">
+                hgse
+            </option>
+            <option value="hinu">
+                hinu
+            </option>
+            <option value="hist">
+                hist
+            </option>
+            <option value="hunu">
+                hunu
+            </option>
+            <option value="iar">
+                iar
+            </option>
+            <option value="igen">
+                igen
+            </option>
+            <option value="info">
+                info
+            </option>
+            <option value="isci">
+                isci
+            </option>
+            <option value="ital">
+                ital
+            </option>
+            <option value="itst">
+                itst
+            </option>
+            <option value="iwme">
+                iwme
+            </option>
+            <option value="japn">
+                japn
+            </option>
+            <option value="jrnl">
+                jrnl
+            </option>
+            <option value="kin">
+                kin
+            </option>
+            <option value="korn">
+                korn
+            </option>
+            <option value="lais">
+                lais
+            </option>
+            <option value="larc">
+                larc
+            </option>
+            <option value="laso">
+                laso
+            </option>
+            <option value="last">
+                last
+            </option>
+            <option value="latn">
+                latn
+            </option>
+            <option value="law">
+                law
+            </option>
+            <option value="lfs">
+                lfs
+            </option>
+            <option value="libe">
+                libe
+            </option>
+            <option value="libr">
+                libr
+            </option>
+            <option value="ling">
+                ling
+            </option>
+            <option value="lled">
+                lled
+            </option>
+            <option value="math">
+                math
+            </option>
+            <option value="mdvl">
+                mdvl
+            </option>
+            <option value="mech">
+                mech
+            </option>
+            <option value="medg">
+                medg
+            </option>
+            <option value="medi">
+                medi
+            </option>
+            <option value="micb">
+                micb
+            </option>
+            <option value="midw">
+                midw
+            </option>
+            <option value="mine">
+                mine
+            </option>
+            <option value="mrne">
+                mrne
+            </option>
+            <option value="mtrl">
+                mtrl
+            </option>
+            <option value="musc">
+                musc
+            </option>
+            <option value="name">
+                name
+            </option>
+            <option value="nest">
+                nest
+            </option>
+            <option value="nrsc">
+                nrsc
+            </option>
+            <option value="nurs">
+                nurs
+            </option>
+            <option value="obst">
+                obst
+            </option>
+            <option value="onco">
+                onco
+            </option>
+            <option value="path">
+                path
+            </option>
+            <option value="pcth">
+                pcth
+            </option>
+            <option value="pers">
+                pers
+            </option>
+            <option value="phar">
+                phar
+            </option>
+            <option value="phil">
+                phil
+            </option>
+            <option value="phrm">
+                phrm
+            </option>
+            <option value="phth">
+                phth
+            </option>
+            <option value="phys">
+                phys
+            </option>
+            <option value="plan">
+                plan
+            </option>
+            <option value="poli">
+                poli
+            </option>
+            <option value="pols">
+                pols
+            </option>
+            <option value="port">
+                port
+            </option>
+            <option value="psyc">
+                psyc
+            </option>
+            <option value="punj">
+                punj
+            </option>
+            <option value="relg">
+                relg
+            </option>
+            <option value="rgla">
+                rgla
+            </option>
+            <option value="rhsc">
+                rhsc
+            </option>
+            <option value="rmes">
+                rmes
+            </option>
+            <option value="rmst">
+                rmst
+            </option>
+            <option value="rsot">
+                rsot
+            </option>
+            <option value="russ">
+                russ
+            </option>
+            <option value="sans">
+                sans
+            </option>
+            <option value="scan">
+                scan
+            </option>
+            <option value="scie">
+                scie
+            </option>
+            <option value="soci">
+                soci
+            </option>
+            <option value="soil">
+                soil
+            </option>
+            <option value="sowk">
+                sowk
+            </option>
+            <option value="span">
+                span
+            </option>
+            <option value="spha">
+                spha
+            </option>
+            <option value="spph">
+                spph
+            </option>
+            <option value="stat">
+                stat
+            </option>
+            <option value="sts">
+                sts
+            </option>
+            <option value="surg">
+                surg
+            </option>
+            <option value="swed">
+                swed
+            </option>
+            <option value="test">
+                test
+            </option>
+            <option value="thtr">
+                thtr
+            </option>
+            <option value="udes">
+                udes
+            </option>
+            <option value="ufor">
+                ufor
+            </option>
+            <option value="urst">
+                urst
+            </option>
+            <option value="ursy">
+                ursy
+            </option>
+            <option value="vant">
+                vant
+            </option>
+            <option value="visa">
+                visa
+            </option>
+            <option value="wood">
+                wood
+            </option>
+            <option value="wrds">
+                wrds
+            </option>
+            <option value="zool">
+                zool
+            </option>
+        </select>
+            <input class="w3-input w3-border w3-round" type="text" placeholder="Enter a course number" id="numbers"></input>
+            Select AND/OR: <select class="w3-input w3-border w3-round" id="andOrcourse">    <option value="AND">AND</option>
+            <option value="OR">OR</option>
+        </select>
+        </div>
+
+    </div>
+    <div class = "w3-display-container w3-border w3-round w3-padding-24 w3-margin" style="height:300px">
+        <h2 class="w3-display-topmiddle" style="text-align:center">Room Selection</h2>
+        <div class = "w3-display-left w3-padding w3-border w3-margin-left w3-round">
+            <h3 style="text-align:center">Filter by building</h3>
+            <select id="rooms" multiple="multiple" style="position: absolute; left: -9999px;"><option value="AERL">AERL</option><option value="ALRD">ALRD</option><option value="ANGU">ANGU</option><option value="ANSO">ANSO</option><option value="AUDX">AUDX</option><option value="BIOL">BIOL</option><option value="BRKX">BRKX</option><option value="BUCH">BUCH</option><option value="CEME">CEME</option><option value="CHBE">CHBE</option><option value="CHEM">CHEM</option><option value="CIRS">CIRS</option><option value="DMP">DMP</option><option value="EOSM">EOSM</option><option value="ESB">ESB</option><option value="FNH">FNH</option><option value="FORW">FORW</option><option value="FRDM">FRDM</option><option value="FSC">FSC</option><option value="GEOG">GEOG</option><option value="HEBB">HEBB</option><option value="HENN">HENN</option><option value="IBLC">IBLC</option><option value="IONA">IONA</option><option value="LASR">LASR</option><option value="LSC">LSC</option><option value="LSK">LSK</option><option value="MATH">MATH</option><option value="MATX">MATX</option><option value="MCLD">MCLD</option><option value="MCML">MCML</option><option value="MGYM">MGYM</option><option value="ORCH">ORCH</option><option value="OSBO">OSBO</option><option value="PCOH">PCOH</option><option value="PHRM">PHRM</option><option value="SCRF">SCRF</option><option value="SOWK">SOWK</option><option value="SPPH">SPPH</option><option value="SRC">SRC</option><option value="SWNG">SWNG</option><option value="UCLL">UCLL</option><option value="WESB">WESB</option><option value="WOOD">WOOD</option></select>
+        </div>
+
+        <div class = "w3-display-right w3-padding w3-margin-right w3-border w3-round" style="width:25%">
+            <h3 style="text-align:center">Filter by distance</h3>
+        <select class="w3-select w3-border w3-round" id="distroom"><option value="">Select a building</option><option value="AERL">AERL</option><option value="ALRD">ALRD</option><option value="ANGU">ANGU</option><option value="ANSO">ANSO</option><option value="AUDX">AUDX</option><option value="BIOL">BIOL</option><option value="BRKX">BRKX</option><option value="BUCH">BUCH</option><option value="CEME">CEME</option><option value="CHBE">CHBE</option><option value="CHEM">CHEM</option><option value="CIRS">CIRS</option><option value="DMP">DMP</option><option value="EOSM">EOSM</option><option value="ESB">ESB</option><option value="FNH">FNH</option><option value="FORW">FORW</option><option value="FRDM">FRDM</option><option value="FSC">FSC</option><option value="GEOG">GEOG</option><option value="HEBB">HEBB</option><option value="HENN">HENN</option><option value="IBLC">IBLC</option><option value="IONA">IONA</option><option value="LASR">LASR</option><option value="LSC">LSC</option><option value="LSK">LSK</option><option value="MATH">MATH</option><option value="MATX">MATX</option><option value="MCLD">MCLD</option><option value="MCML">MCML</option><option value="MGYM">MGYM</option><option value="ORCH">ORCH</option><option value="OSBO">OSBO</option><option value="PCOH">PCOH</option><option value="PHRM">PHRM</option><option value="SCRF">SCRF</option><option value="SOWK">SOWK</option><option value="SPPH">SPPH</option><option value="SRC">SRC</option><option value="SWNG">SWNG</option><option value="UCLL">UCLL</option><option value="WESB">WESB</option><option value="WOOD">WOOD</option></select>
+        <input class="w3-input w3-border w3-round" placeholder="Enter distance from building(meters)" type="number" id="distance" />
+        Select AND/OR: <select class="w3-input w3-border w3-round" id="andOr">    <option value="AND">AND</option>
+        <option value="OR">OR</option>
+    </select>
+        </div>
+        <button class = "w3-button w3-black w3-display-bottommiddle w3-round w3-margin" id="btnSchedule">Schedule!</button><br>
+
+    </div>
+    <div class ="w3-display-container w3-padding w3-margin w3-round">
+        <div class = "w3-container"><h2>Courses to schedule</h2></div>
+        <table class="w3-table-all" id="coursetable" style="width:90%;margin:0px auto;">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Number of sections</th>
+                    <th>Expected size</th>
+                </tr>
+            </thead>
+            <tbody id="coursebody">
+
+            </tbody>
+        </table>
+    </div>
+    <div class ="w3-display-container w3-padding w3-margin w3-round">
+        <div class = "w3-container"><h2>Schedule</h2></div>
+        <p class="w3-center" id="quality"></p>
+        <table class="w3-table-all" id="mwf" style="width:48%; float:left;">
+            <caption>Monday/Wednesday/Friday</caption>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Room</th>
+                    <th>Seats</th>
+                    <th>Enrolled</th>
+                </tr>
+            </thead>
+            <tbody id="bodymwf">
+            </tbody>
+        </table>
+        <table class="w3-table-all" id="tuth" style="width:48%; float:right;">
+            <caption>Tuesday/Thursday</caption>
+            <thead>
+            <tr>
+                <th>Time</th>
+                <th>Course</th>
+                <th>Room</th>
+                <th>Seats</th>
+                <th>Enrolled</th>
+            </tr>
+            </thead>
+            <tbody id="bodytuth">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+table,td ,th{
+    border: 1px solid black;
+    max-height: 1000px;
+}
+
+table {
+    border-collapse: collapse;
+}

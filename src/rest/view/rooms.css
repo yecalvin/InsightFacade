@@ -1,0 +1,15 @@
+ .container {
+     width: 100%;
+     margin: auto;
+ }
+ .queryRooms {
+     width: 40%;
+     float: left;
+ }
+ .rooms {
+     width: 50%;
+     float: left;
+     max-height: 500px;
+ }
+ 
+​
